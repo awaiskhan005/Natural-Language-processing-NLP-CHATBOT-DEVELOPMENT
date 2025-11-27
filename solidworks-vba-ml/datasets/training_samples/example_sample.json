@@ -1,0 +1,20 @@
+{
+  "sample_id": "example-001",
+  "prompt": "Create a circle with radius 50mm at the origin",
+  "vba_code": "Sub CreateCircle()\n    Dim swApp As SldWorks.SldWorks\n    Dim swModel As SldWorks.ModelDoc2\n\n    Set swApp = CreateObject(\"SldWorks.Application\")\n    Set swModel = swApp.ActiveDoc\n\n    swModel.InsertSketch2 True\n    swModel.CreateCircle2 0, 0, 0, 0.05\n    swModel.InsertSketch2 False\nEnd Sub",
+  "api_calls": [
+    "swModel.InsertSketch2",
+    "swModel.CreateCircle2"
+  ],
+  "geometry_data": {
+    "type": "circle",
+    "center": [0, 0, 0],
+    "radius": 50
+  },
+  "metadata": {
+    "complexity": "basic",
+    "category": "sketch",
+    "tags": ["circle", "sketch", "2d"]
+  },
+  "created_at": "2024-01-01T00:00:00"
+}

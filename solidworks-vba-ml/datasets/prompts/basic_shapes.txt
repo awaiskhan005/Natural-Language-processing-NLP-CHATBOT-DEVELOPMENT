@@ -1,0 +1,10 @@
+Generate SOLIDWORKS VBA code for the following task:
+
+Task: {task_description}
+
+Requirements:
+- Use proper SOLIDWORKS API calls
+- Include error handling
+- Add comments for clarity
+
+VBA Code:
