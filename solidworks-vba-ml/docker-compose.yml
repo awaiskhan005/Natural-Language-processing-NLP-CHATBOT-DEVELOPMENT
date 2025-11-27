@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  api:
+    build: .
+    container_name: solidworks-vba-ml-api
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./datasets:/app/datasets
+      - ./models:/app/models
+      - ./logs:/app/logs
+    environment:
+      - DEBUG=True
+      - ENVIRONMENT=development
+    env_file:
+      - .env
+    restart: unless-stopped
+    depends_on:
+      - redis
+
+  redis:
+    image: redis:7-alpine
+    container_name: solidworks-vba-ml-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    restart: unless-stopped
+
+volumes:
+  redis_data:

@@ -1,0 +1,68 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+.venv
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Environment
+.env
+.env.local
+
+# Logs
+logs/
+*.log
+
+# Models
+models/checkpoints/
+models/cache/
+models/exports/
+*.pt
+*.pth
+*.bin
+
+# Datasets (keep structure, ignore content)
+datasets/vba_macros/*.vba
+!datasets/vba_macros/example_circle.vba
+datasets/training_samples/*.json
+!datasets/training_samples/example_sample.json
+datasets/geometry_json/*.json
+datasets/api_references/*.json
+!datasets/api_references/
+
+# Database
+*.db
+*.sqlite
+
+# Temporary files
+*.tmp
+tmp/
+temp/
+
+# Docker
+docker-compose.override.yml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Distribution
+dist/
+build/
+*.egg-info/
