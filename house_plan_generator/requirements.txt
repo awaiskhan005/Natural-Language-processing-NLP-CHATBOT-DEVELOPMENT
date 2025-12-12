@@ -1,0 +1,8 @@
+# House Plan Generator Requirements
+
+# DXF file generation
+ezdxf>=1.0.0
+
+# For standalone execution (optional)
+# Blender is required separately for 3D rendering
+# Install Blender from https://www.blender.org/download/
